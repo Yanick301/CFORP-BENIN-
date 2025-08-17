@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EFORP-BENIN - Contact</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: #1B4D3E;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(27, 77, 62, 0.8)),
+      url('https://images.unsplash.com/photo-1503428593586-e225b39bddfe') center/cover;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .contact-form input, .contact-form textarea {
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #1B4D3E;
+      box-shadow: 0 0 8px rgba(27, 77, 62, 0.5);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      background-color: #1B4D3E;
+      color: white;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      color: #F39C12;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="eforp.png" alt="Logo" style="width:40px;"> EFORP-BENIN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="filieres.html">Filières</a></li>
+          <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Contactez-nous</h1>
+    <p>Nous sommes à votre écoute</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <!-- Form -->
+      <div class="col-lg-6">
+        <div class="contact-form">
+          <h3 class="mb-4 text-center text-success">Envoyer un message</h3>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom complet</label>
+              <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Adresse e-mail</label>
+              <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Sujet</label>
+              <input type="text" class="form-control" id="subject" placeholder="Sujet du message">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Envoyer</button>
+          </form>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="col-lg-6">
+        <h3 class="mb-4 text-success">Nous localiser</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9396247455415!2d2.418!3d6.3703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102354fb2cd67a15%3A0x5b5a548e51e1f1d5!2sCotonou%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sbj!4v1692791781563!5m2!1sfr!2sbj"
+         width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Réseaux sociaux -->
+  <section class="text-center my-4">
+    <h5>Suivez-nous</h5>
+    <a href="#"><i class="fab fa-facebook fa-2x mx-2 text-primary"></i></a>
+    <a href="#"><i class="fab fa-instagram fa-2x mx-2 text-danger"></i></a>
+    <a href="#"><i class="fab fa-whatsapp fa-2x mx-2 text-success"></i></a>
+    <a href="#"><i class="fab fa-linkedin fa-2x mx-2 text-info"></i></a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-white mt-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <img src="eforp.png" alt="EFORP-BENIN" width="60" class="mb-2">
+          <h5>EFORP-BENIN</h5>
+          <p>Centre de formation professionnelle offrant des programmes adaptés au marché de l’emploi.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Accueil</a></li>
+            <li><a href="filieres.html" class="text-white text-decoration-none">Filières</a></li>
+            <li><a href="apropos.html" class="text-white text-decoration-none">À propos</a></li>
+            <li><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Suivez-nous</h5>
+          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">&copy; 2025 EFORP-BENIN - Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
