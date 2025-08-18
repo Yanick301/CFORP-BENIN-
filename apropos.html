@@ -7,63 +7,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-    .navbar {
-      background-color: #1B4D3E;
-    }
-    .navbar-brand, .navbar-nav .nav-link {
-      color: white !important;
-      font-weight: bold;
-    }
+    body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    .navbar { background-color: #1B4D3E; }
+    .navbar-brand, .navbar-nav .nav-link { color: white !important; font-weight: bold; }
+
     .hero {
-      background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(27, 77, 62, 0.8)), url('https://images.unsplash.com/photo-1581091012184-5c1d7c2f14d8') center/cover;
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
+      background: linear-gradient(rgba(27, 77, 62, 0.7), rgba(27, 77, 62, 0.7)),
+                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1') center/cover;
+      color: white; text-align: center; padding: 80px 20px;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-    .about-img {
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-    .about-img:hover {
-      transform: scale(1.03);
-    }
+    .hero h1 { font-size: 2.8rem; font-weight: bold; }
+
+    .about-img { border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
     .icon-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
+      background: white; border-radius: 10px; padding: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .icon-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    .icon-card i {
-      font-size: 2.5rem;
-      color: #F39C12;
-      margin-bottom: 10px;
-    }
-    footer {
-      background-color: #1B4D3E;
-      color: white;
-    }
-    footer a {
-      color: white;
-      margin: 0 10px;
-    }
-    footer a:hover {
-      color: #F39C12;
-    }
+    .icon-card:hover { transform: translateY(-8px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+    .icon-card i { font-size: 2.5rem; color: #F39C12; margin-bottom: 10px; }
+
+    .stats { background: #f8f9fa; padding: 50px 20px; }
+    .stats .stat { text-align: center; }
+    .stats h2 { color: #1B4D3E; font-weight: bold; }
+
+    footer { background-color: #1B4D3E; color: white; }
+    footer a { color: white; margin: 0 10px; }
+    footer a:hover { color: #F39C12; }
   </style>
 </head>
 <body>
@@ -90,19 +61,20 @@
   <!-- Hero -->
   <section class="hero">
     <h1>À propos d'EFORP-BENIN</h1>
-    <p>Former aujourd'hui les professionnels de demain</p>
+    <p>Former aujourd'hui les professionnels compétents de demain</p>
   </section>
 
   <!-- Présentation -->
   <section class="container my-5">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4">
-        <img src="https://images.unsplash.com/photo-1581090700227-4c4f50b1b37f" alt="Formation" class="img-fluid about-img">
+        <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Formation en salle" class="img-fluid about-img">
       </div>
       <div class="col-md-6">
         <h3>Qui sommes-nous ?</h3>
-        <p>EFORP-BENIN est un centre de formation professionnelle reconnu pour son engagement envers l’excellence et l’innovation. Notre mission est de préparer des professionnels qualifiés capables de répondre aux exigences du marché de l’emploi local et international.</p>
-        <p>Nous proposons des programmes variés et adaptés aux réalités socio-économiques actuelles, dans plusieurs secteurs porteurs.</p>
+        <p><strong>EFORP-BENIN</strong> est un centre de formation professionnelle moderne et dynamique, reconnu pour son excellence académique et sa pédagogie innovante. 
+        Nous préparons des apprenants compétents, adaptés au marché de l’emploi local et international.</p>
+        <p>Nos programmes couvrent des domaines variés tels que la gestion, l’informatique, la comptabilité, et d’autres filières porteuses, avec un accent particulier sur la pratique et l’esprit entrepreneurial.</p>
       </div>
     </div>
   </section>
@@ -114,14 +86,14 @@
         <div class="icon-card">
           <i class="fas fa-bullseye"></i>
           <h5>Notre Mission</h5>
-          <p>Offrir des formations de qualité qui allient théorie et pratique, pour garantir l’employabilité et l’esprit entrepreneurial de nos apprenants.</p>
+          <p>Fournir des formations de haute qualité, alliant théorie et pratique, pour garantir l’employabilité et le développement personnel de nos apprenants.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="icon-card">
           <i class="fas fa-eye"></i>
           <h5>Notre Vision</h5>
-          <p>Devenir un leader de la formation professionnelle en Afrique de l’Ouest, reconnu pour ses innovations pédagogiques et son impact socio-économique.</p>
+          <p>Devenir une référence incontournable en matière de formation professionnelle en Afrique de l’Ouest.</p>
         </div>
       </div>
     </div>
@@ -129,27 +101,51 @@
 
   <!-- Valeurs -->
   <section class="container my-5">
-    <h3 class="text-center mb-4">Nos Valeurs</h3>
+    <h3 class="text-center mb-4">Nos Valeurs Fondamentales</h3>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="icon-card">
           <i class="fas fa-handshake"></i>
           <h5>Engagement</h5>
-          <p>Nous nous investissons pleinement dans la réussite de nos étudiants et partenaires.</p>
+          <p>Accompagner chaque étudiant dans son parcours jusqu’à son insertion professionnelle réussie.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="icon-card">
           <i class="fas fa-lightbulb"></i>
           <h5>Innovation</h5>
-          <p>Nous adoptons des approches pédagogiques modernes pour maximiser l’apprentissage.</p>
+          <p>Introduire des méthodes pédagogiques modernes et interactives pour un meilleur apprentissage.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="icon-card">
           <i class="fas fa-users"></i>
           <h5>Esprit d’équipe</h5>
-          <p>Nous valorisons la collaboration et l’échange entre nos formateurs et apprenants.</p>
+          <p>Favoriser l’entraide, la collaboration et l’apprentissage collectif.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chiffres clés -->
+  <section class="stats">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 stat">
+          <h2>+1000</h2>
+          <p>Étudiants formés</p>
+        </div>
+        <div class="col-md-3 stat">
+          <h2>15+</h2>
+          <p>Filières professionnelles</p>
+        </div>
+        <div class="col-md-3 stat">
+          <h2>30+</h2>
+          <p>Formateurs experts</p>
+        </div>
+        <div class="col-md-3 stat">
+          <h2>20+</h2>
+          <p>Partenaires académiques</p>
         </div>
       </div>
     </div>
