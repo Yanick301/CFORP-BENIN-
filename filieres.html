@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       scroll-behavior: smooth;
     }
     .navbar {
@@ -19,33 +19,87 @@
       font-weight: bold;
     }
     .hero {
-      background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(27, 77, 62, 0.8)), url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b') center/cover;
+      background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(27, 77, 62, 0.85)), 
+                  url('https://images.unsplash.com/photo-1581091870638-42d11f9c3b2c') center/cover;
       color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 120px 20px;
     }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
     }
     .service-card {
       background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
     }
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.2);
     }
     .service-card i {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #F39C12;
       margin-bottom: 15px;
     }
+    .cta-section {
+      background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9)),
+                  url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b") center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 10px;
+      margin-top: 70px;
+    }
+    .timeline {
+      position: relative;
+      margin: 40px auto;
+      padding: 0;
+      list-style: none;
+      max-width: 900px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #1B4D3E;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      width: 50%;
+      padding: 20px;
+    }
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 50%; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: #F39C12;
+      border-radius: 50%;
+      left: -10px;
+    }
+    .timeline-item.right::before { left: -10px; }
     footer {
       background-color: #1B4D3E;
       color: white;
@@ -83,125 +137,92 @@
   <!-- Hero -->
   <section class="hero">
     <h1>Nos Filières de Formation</h1>
-    <p>Des programmes adaptés aux besoins du marché et aux métiers d’avenir</p>
+    <p>Des programmes modernes, adaptés au marché de l’emploi et aux métiers d’avenir</p>
   </section>
 
   <!-- Filières -->
   <section class="container my-5">
+    <div class="section-title">
+      <h2 class="fw-bold">Découvrez nos domaines</h2>
+      <p class="text-muted">Chaque filière est conçue pour vous préparer efficacement aux réalités professionnelles.</p>
+    </div>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="service-card">
           <i class="fas fa-bullhorn"></i>
           <h5>Communication & Marketing Digital</h5>
-          <p>Maîtrisez les outils modernes pour promouvoir efficacement des produits et services sur le marché numérique.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-solar-panel"></i>
-          <h5>Installation & Maintenance Systèmes Photovoltaïques</h5>
-          <p>Apprenez à installer et entretenir des systèmes solaires pour un avenir énergétique durable.</p>
+          <p>Devenez un expert en stratégies numériques, réseaux sociaux et publicité en ligne.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-card">
           <i class="fas fa-network-wired"></i>
-          <h5>Administration Réseaux Informatiques & Sécurité</h5>
-          <p>Formez-vous à gérer des réseaux et assurer leur sécurité contre les cybermenaces.</p>
+          <h5>Administration Réseaux & Sécurité</h5>
+          <p>Maîtrisez les infrastructures réseaux et la cybersécurité pour protéger les données sensibles.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-card">
-          <i class="fas fa-briefcase"></i>
-          <h5>Secrétariats</h5>
-          <p>Acquérez les compétences nécessaires pour assister efficacement la gestion administrative.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-pills"></i>
-          <h5>Auxiliaire en Pharmacie</h5>
-          <p>Préparez-vous à assister les pharmaciens dans la gestion et la dispensation des médicaments.</p>
+          <i class="fas fa-solar-panel"></i>
+          <h5>Systèmes Photovoltaïques</h5>
+          <p>Apprenez à installer et entretenir des solutions solaires durables.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-card">
           <i class="fas fa-user-md"></i>
           <h5>Délégué Médical</h5>
-          <p>Devenez un intermédiaire clé entre les laboratoires pharmaceutiques et les professionnels de santé.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-paint-brush"></i>
-          <h5>Graphisme</h5>
-          <p>Apprenez à créer des visuels attractifs pour le print et le digital.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-hotel"></i>
-          <h5>Hôtellerie & Restauration</h5>
-          <p>Formez-vous aux métiers de l’accueil, de la cuisine et du service hôtelier.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-tshirt"></i>
-          <h5>Mode & Stylisme</h5>
-          <p>Maîtrisez la création de vêtements et la haute couture.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-cut"></i>
-          <h5>Esthétique & Coiffure</h5>
-          <p>Devenez expert en soins de beauté, coiffure et cosmétique.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-tv"></i>
-          <h5>Maintenance Audiovisuelle</h5>
-          <p>Apprenez à réparer et entretenir les équipements audio et vidéo.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-desktop"></i>
-          <h5>Installation & Maintenance Informatique</h5>
-          <p>Formez-vous à monter, réparer et entretenir les ordinateurs.</p>
+          <p>Un rôle clé entre les laboratoires et les professionnels de santé.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-card">
           <i class="fas fa-code"></i>
           <h5>Développement Web & Mobile</h5>
-          <p>Créez des sites et applications mobiles modernes.</p>
+          <p>Concevez des applications et sites modernes, adaptés aux besoins actuels.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-card">
-          <i class="fas fa-paint-roller"></i>
-          <h5>Peinture & Staff</h5>
-          <p>Maîtrisez les techniques décoratives et le staff architectural.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-hammer"></i>
-          <h5>Menuiserie Moderne</h5>
-          <p>Apprenez à concevoir et réaliser des meubles et menuiseries innovants.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <i class="fas fa-map-marked-alt"></i>
-          <h5>Topographie</h5>
-          <p>Maîtrisez les techniques de relevés topographiques pour les projets de construction.</p>
+          <i class="fas fa-hotel"></i>
+          <h5>Hôtellerie & Restauration</h5>
+          <p>Formez-vous aux métiers de l’accueil, du service et de la gastronomie.</p>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Timeline Formation -->
+  <section class="container my-5">
+    <div class="section-title">
+      <h2 class="fw-bold">Votre Parcours de Formation</h2>
+      <p class="text-muted">Une progression claire et adaptée à chaque étudiant.</p>
+    </div>
+    <ul class="timeline">
+      <li class="timeline-item left bg-light rounded shadow">
+        <h5><i class="fas fa-chalkboard-teacher text-warning"></i> Cours Théoriques</h5>
+        <p>Apprentissage des bases fondamentales de la filière choisie.</p>
+      </li>
+      <li class="timeline-item right bg-light rounded shadow">
+        <h5><i class="fas fa-tools text-warning"></i> Travaux Pratiques</h5>
+        <p>Mise en pratique des notions dans des ateliers modernes.</p>
+      </li>
+      <li class="timeline-item left bg-light rounded shadow">
+        <h5><i class="fas fa-briefcase text-warning"></i> Stages Professionnels</h5>
+        <p>Immersion dans le monde du travail pour acquérir de l’expérience réelle.</p>
+      </li>
+      <li class="timeline-item right bg-light rounded shadow">
+        <h5><i class="fas fa-graduation-cap text-warning"></i> Certification</h5>
+        <p>Un diplôme reconnu qui ouvre les portes du marché de l’emploi.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2 class="fw-bold">Rejoignez EFORP-BENIN dès aujourd’hui</h2>
+    <p class="mb-4">Construisez votre avenir professionnel grâce à une formation adaptée et reconnue.</p>
+    <a href="contact.html" class="btn btn-warning btn-lg fw-bold">S’inscrire maintenant</a>
   </section>
 
   <!-- Footer -->
